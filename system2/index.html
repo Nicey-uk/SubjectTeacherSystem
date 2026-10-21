@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Consumer - Subject Teacher System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>API Consumer</h1>
+    <p>System 2 — GET, POST, PUT and DELETE</p>
+    <nav>
+      <a href="/system1">System 1</a>
+      <a href="/system2">System 2</a>
+      <a href="/system3">System 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>API Request Tool</h2>
+      <p>Use this form to send requests to the shared API.</p>
+
+      <label for="method">HTTP Method</label>
+      <select id="method">
+        <option value="GET">GET — View records</option>
+        <option value="POST">POST — Add record</option>
+        <option value="PUT">PUT — Update record</option>
+        <option value="DELETE">DELETE — Delete record</option>
+      </select>
+
+      <label for="recordId">Record ID (for GET one, PUT and DELETE)</label>
+      <input type="number" id="recordId" min="1" placeholder="Example: 1">
+
+      <div id="dataFields">
+        <label for="teacher">Teacher Name</label>
+        <input type="text" id="teacher" placeholder="Example: Juan Dela Cruz">
+
+        <label for="subject">Subject Name</label>
+        <input type="text" id="subject" placeholder="Example: Programming 1">
+
+        <label for="section">Section</label>
+        <input type="text" id="section" placeholder="Example: BSIT-1A">
+      </div>
+
+      <button id="sendButton">Send API Request</button>
+      <button id="getAllButton" class="secondary">GET All Records</button>
+
+      <p id="status" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>API Response</h2>
+      <pre id="response">Your API response will appear here.</pre>
+    </section>
+
+    <section class="panel">
+      <h2>Shared Allocation Records</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Teacher</th>
+              <th>Subject</th>
+              <th>Section</th>
+            </tr>
+          </thead>
+          <tbody id="records">
+            <tr><td colspan="4">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

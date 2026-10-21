@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System 3 - Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>System 3</h1>
+        <p>Subject and Teacher Allocation Notifications</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Total Events</h3>
+                <p id="totalEvents">0</p>
+            </div>
+            <div class="card">
+                <h3>Created</h3>
+                <p id="createdEvents">0</p>
+            </div>
+            <div class="card">
+                <h3>Updated</h3>
+                <p id="updatedEvents">0</p>
+            </div>
+            <div class="card">
+                <h3>Deleted</h3>
+                <p id="deletedEvents">0</p>
+            </div>
+        </section>
+
+        <section class="notifications">
+            <div class="section-heading">
+                <h2>Event History</h2>
+                <button id="refreshBtn">Refresh</button>
+            </div>
+
+            <p id="status">Loading events...</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Action</th>
+                            <th>Source</th>
+                            <th>Message</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventsTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

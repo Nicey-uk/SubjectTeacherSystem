@@ -1,0 +1,17 @@
+{
+  "allocations": [
+    {
+      "id": 1,
+      "teacher_name": "Fely Dagalea",
+      "subject_name": "IT PROGRAMMING 3",
+      "section_name": "BSIT 3Z"
+    },
+    {
+      "id": 2,
+      "teacher_name": "Maika",
+      "subject_name": "prog",
+      "section_name": "beqqq"
+    }
+  ],
+  "next_id": 3
+}

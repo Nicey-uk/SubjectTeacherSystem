@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject and Teacher Allocation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Subject and Teacher Allocation</h1>
+    <p>System 1 — Main Management System</p>
+    <nav>
+      <a href="/system1">System 1</a>
+      <a href="/system2">System 2</a>
+      <a href="/system3">System 3</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2 id="formTitle">Add New Allocation</h2>
+
+      <form id="allocationForm">
+        <input type="hidden" id="allocationId">
+
+        <label for="teacher">Teacher Name</label>
+        <input id="teacher" type="text" placeholder="Enter teacher name" required>
+
+        <label for="subject">Subject Name</label>
+        <input id="subject" type="text" placeholder="Enter subject name" required>
+
+        <label for="section">Section</label>
+        <input id="section" type="text" placeholder="Example: BSIT-1A" required>
+
+        <button type="submit" id="saveButton">Add Allocation</button>
+        <button type="button" id="cancelButton" class="secondary" hidden>Cancel Edit</button>
+      </form>
+
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <h2>Allocation Records</h2>
+        <button type="button" id="refreshButton" class="secondary">Refresh</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Teacher</th>
+              <th>Subject</th>
+              <th>Section</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="allocationTable">
+            <tr><td colspan="5">Loading records...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
